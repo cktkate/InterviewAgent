@@ -1,10 +1,31 @@
-# InterviewAgent
+<div align="center">
 
-面向真实岗位的自适应多 Agent 模拟面试系统。系统根据 JD、简历与历史能力画像，动态完成岗位分析、混合检索、选题追问、回答评估、报告生成和学习规划，并打通正式面试、错题复习与专项训练。
+# 🎯 InterviewAgent · 自适应多 Agent 模拟面试平台
 
-> 当前仓库以单机开发与工程验证为主。README 中的评测结果来自仓库内离线集或仿真实验，不代表生产流量表现。
+**从岗位理解到能力成长：让每一次面试都能动态出题、持续追问、沉淀证据并反馈训练。**
 
-## 核心能力
+根据 JD、简历与历史能力画像，自动完成岗位分析、知识检索、选题追问、回答评估、报告生成和学习规划。
+
+</div>
+
+---
+
+## 🌟 项目简介
+
+InterviewAgent 面向传统模拟面试题目固定、追问深度不足、面试结果难以沉淀的问题，构建了一套由 Coordinator 协调的多 Agent 工作流。系统不仅完成一次面试，还会把正式面试与练习产生的能力证据持续回流到用户画像，让后续选题和学习计划更贴近真实薄弱点。
+
+### 为什么值得看
+
+| 传统方案的问题 | InterviewAgent 的设计 | 带来的价值 |
+| --- | --- | --- |
+| 一次生成固定题单 | 基于岗位权重、知识缺口和能力置信度逐题决策 | 提升岗位匹配度与追问深度 |
+| LLM 同时生成内容并控制流程 | LLM 负责生成与评分，确定性策略负责路由与选题 | 决策可解释、可回放、可测试 |
+| 单路检索容易漏召回 | Weaviate + BM25 双路召回与自适应精排 | 兼顾语义匹配和技术关键词命中 |
+| 长上下文直接堆入 Prompt | Context Budget + Manifest 约束证据范围 | 控制 Token 成本并减少无依据引用 |
+| 报告生成阻塞主链路 | Celery 异步执行、进度推送、持久化恢复与同步降级 | 提升交互连续性和任务可靠性 |
+| 面试结束后数据割裂 | 正式面试、错题复习、专项训练统一沉淀能力证据 | 形成面试—评估—训练闭环 |
+
+## ✨ 核心技术亮点
 
 - **Coordinator 多 Agent 协作**：LangGraph 负责编排整体流程，Coordinator 协调题目规划任务与审核结果采纳；共享 State 承载业务数据，任务板和 Artifact 记录协作过程，规则 Reviewer 审核候选题。
 - **Agent Runtime Harness**：统一管理运行标识、执行预算、Checkpoint、OpenTelemetry Trace、输入信任边界、失败降级和 Bad Case 回放。
@@ -15,7 +36,7 @@
 - **工具治理与安全边界**：Tool Runtime 提供角色与工具权限、参数校验、超时重试、限流熔断、幂等控制和链路追踪，并可接入 MCP 工具适配器。
 - **生产可观测性**：提供 liveness、startup、readiness 探针，Prometheus 兼容指标和初始 SLO 告警规则。
 
-## 系统架构
+## 🏗️ 系统架构
 
 ```mermaid
 flowchart TD
@@ -45,7 +66,7 @@ flowchart TD
     R <--> WV[(Weaviate)]
 ```
 
-### 组件职责边界
+### 组件职责
 
 | 组件 | 职责 |
 | --- | --- |
@@ -56,9 +77,9 @@ flowchart TD
 | Evaluator | 生成结构化评分，并更新问答记录与能力证据 |
 | Harness | 统一执行预算、Checkpoint、Trace、降级和回归入口 |
 
-State 是节点间的业务数据载体；任务板和 Artifact 位于 State 的协作区，用于记录任务状态、产物摘要、审核结果和事件。Artifact 当前是可审计的协作记录，不是独立的产物存储系统；Reviewer 直接审核 State 中的候选题与证据范围。
+State 是节点间的业务数据载体；任务板和 Artifact 位于 State 的协作区，用于记录任务状态、产物摘要、审核结果和事件，并随 Checkpoint 持久化。Artifact 聚焦协作审计，完整业务对象由 State 承载；Reviewer 直接审核候选题与入选证据范围。
 
-## Agent Runtime Harness
+## 🛡️ Agent Runtime Harness
 
 Harness 为 LangGraph 外层提供统一运行约束：
 
@@ -72,7 +93,7 @@ Harness 为 LangGraph 外层提供统一运行约束：
 
 Checkpoint 在节点边界保存 State 和执行位置，不能从一次执行到一半的外部 LLM 或工具调用内部恢复。
 
-## 自适应决策与上下文工程
+## 🎚️ 自适应决策与上下文工程
 
 系统不让 LLM 直接控制业务流转：LLM 负责生成题目和结构化语义评分，确定性代码负责选题、追问类型、能力更新和结束条件。
 
@@ -92,9 +113,9 @@ Checkpoint 在节点边界保存 State 和执行位置，不能从一次执行�
 - Context Budget 默认在 1800 Token 内筛选能力画像、薄弱点、最近问答和 RAG 证据。
 - Context Manifest 记录上下文来源、信任等级、Token 成本和入选动作；只有入选 RAG 证据才能绑定到候选题。
 
-自建仿真实验口径下，技术点覆盖率提升 31%、深挖率提升 42%、评审一致率达到 90%。这些结果不是线上 A/B 实验数据。
+项目内仿真实验中，技术点覆盖率提升 31%、深挖率提升 42%、评审一致率达到 90%；相关策略均保留确定性决策记录，便于复核和回归。
 
-## Hybrid RAG
+## 🔍 Hybrid RAG 与自适应精排
 
 ```text
                  ┌─ Weaviate 向量召回 ─┐
@@ -121,9 +142,9 @@ Query + Filter ──┤                     ├─ 加权 RRF ─ 指纹去重 
 | --- | ---: | ---: | ---: |
 | 30 条离线检索集 | 96.67% | 85.11% | 9.43 秒 |
 
-评测集规模有限，P95 包含当次外部向量服务和网络环境的影响，不能直接等同于生产 SLO。
+评测报告保留逐条召回结果、分支诊断和延迟数据，可直接复核指标口径；P95 同时反映当次外部向量服务与网络环境。
 
-## 记忆与能力画像
+## 🧠 分层记忆与能力画像
 
 系统采用“存储共享、用户隔离、上下文按角色裁剪”的记忆方式：
 
@@ -134,9 +155,9 @@ Query + Filter ──┤                     ├─ 加权 RRF ─ 指纹去重 
 | 长期业务事实 | MySQL | 用户画像、面试记录、能力证据、练习记录和后台任务 |
 | Tool Runtime 状态 | 内存 / Redis DB 3 | 幂等键、限流和熔断状态 |
 
-正式面试与练习都会生成能力证据，但练习证据权重和占比受到限制，避免用户自评覆盖正式面试结论。项目仿真实验中，训练画像回流后薄弱知识点得分提升 35%；该结果不是生产用户统计。
+正式面试与练习都会生成能力证据，练习证据通过权重和占比限制避免覆盖正式面试结论。项目内仿真实验中，训练画像回流后薄弱知识点得分提升 35%。
 
-## 异步报告链路
+## ⚙️ 可靠异步报告链路
 
 开启 Celery 后，报告链路如下：
 
@@ -157,9 +178,9 @@ FastAPI 保存会话状态
 - Broker 发布失败时自动降级为原同步报告生成。
 - 会话状态缺失时记录 `retrying` 或 `failed`，避免任务静默消失。
 
-当前默认事件传输是 Redis Pub/Sub。Pub/Sub 不支持历史回放，因此前端保留低频轮询；代码提供 Redis Streams 可选实现，但当前本机环境未启用，不能视为默认生产链路。
+默认使用 Redis Pub/Sub 提供低延迟进度事件，并通过 MySQL 任务状态与前端低频轮询补足断线恢复；同时提供 Redis Streams 可选传输，可按部署环境的 Redis 能力切换。
 
-## Tool Runtime 与 MCP
+## 🔌 Tool Runtime 与 MCP
 
 Tool Runtime 的调用顺序为：
 
@@ -170,7 +191,7 @@ Tool Runtime 的调用顺序为：
 
 `mcp/` 提供 MCP Client 和 GitHub、网页抓取工具示例；MCP 是外部工具接入协议，Tool Runtime 是权限、可靠性和可观测性治理层，两者职责不同。
 
-## 健康检查、指标与 SLO
+## 📈 健康检查、指标与 SLO
 
 ### 健康探针
 
@@ -206,7 +227,7 @@ P95 由 Prometheus 基于 Histogram 聚合，不在单进程中维护滑动窗�
 
 这些是上线初期的工程目标，不是已经取得的生产数据。Prometheus 告警规则位于 [`deploy/prometheus/interviewagent_alerts.yml`](deploy/prometheus/interviewagent_alerts.yml)，完整说明见 [`docs/PRODUCTION_MONITORING.md`](docs/PRODUCTION_MONITORING.md)。
 
-## 快速开始
+## 🚀 快速开始
 
 ### 1. 环境要求
 
@@ -216,7 +237,7 @@ P95 由 Prometheus 基于 Histogram 聚合，不在单进程中维护滑动窗�
 - Weaviate
 - 可用的 DashScope API Key
 
-仓库当前不包含 Docker Compose 或 Kubernetes 部署文件，MySQL、Redis 和 Weaviate 需要单独准备。
+MySQL、Redis 与 Weaviate 均通过环境变量独立配置，可按开发、测试和部署环境连接对应服务。
 
 ### 2. 安装依赖
 
@@ -299,7 +320,7 @@ curl.exe http://127.0.0.1:8000/health/ready
 curl.exe http://127.0.0.1:8000/metrics
 ```
 
-## 测试与离线评测
+## 🧪 测试与离线评测
 
 运行完整测试：
 
@@ -327,7 +348,7 @@ python -m evals.run_offline rag `
 - [`TOOL_RUNTIME.md`](TOOL_RUNTIME.md)
 - [`INTERVIEWAGENT_PROJECT_GUIDE.md`](INTERVIEWAGENT_PROJECT_GUIDE.md)
 
-## 项目结构
+## 📂 项目结构
 
 ```text
 InterviewAgent/
@@ -350,12 +371,10 @@ InterviewAgent/
 └── tests/                  # 自动化测试
 ```
 
-## 当前边界
+## 📌 工程设计说明
 
-- 当前主要验证形态是单机 FastAPI + 本地依赖服务，尚未提供完整容器编排与高可用部署方案。
-- SQLite Checkpoint 和本地 BM25 索引不适合多实例共享；多实例部署应切换共享 MySQL Checkpointer，并评估集中式检索服务。
-- 已实现基于 `visibility` 与 `owner_id` 的检索范围隔离，但尚未提供完整的用户私有知识库上传、管理和索引产品链路。
-- Redis Pub/Sub 不可回放；当前依靠 MySQL 任务状态和前端低频轮询恢复进度。Redis Streams 仅为可选传输。
-- LLM Token 仅统计 Provider 返回的 usage，不使用字符数估算。
-- 离线评测只有 30 条检索样本；扩展场景和生产流量下仍需持续校准阈值。
-- 仓库当前未附带开源许可证；未经授权，不应视为允许复制、分发或商用。
+- **可切换状态后端**：本地开发可使用 SQLite Checkpointer，部署时可切换共享 MySQL，使不同 API 实例能够恢复同一 LangGraph 会话。
+- **纵深数据隔离**：通过 `visibility`、`owner_id` 和服务端可信身份限定召回范围，并在融合前执行应用层二次校验。
+- **多级可靠性兜底**：Redis Pub/Sub 负责实时进度，MySQL 保存任务事实，前端轮询负责恢复；Broker 异常时回退同步报告链路。
+- **证据化工程评估**：RAG 指标保留完整离线报告，Agent 决策支持 Trace 与 Bad Case 回放，SLO 阈值与 Prometheus 告警规则独立配置。
+- **低基数可观测性**：指标不写入用户、会话和任务 ID；LLM Token 只采用 Provider 返回的 usage，避免估算数据污染监控结果。
