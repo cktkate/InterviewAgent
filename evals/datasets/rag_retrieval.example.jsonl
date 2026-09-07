@@ -1,0 +1,6 @@
+{"case_id":"rag-agent-001","query":"AI Agent 中规划、工具调用和记忆分别解决什么问题","relevant_sources":["Agent.md"],"tags":["agent","architecture"]}
+{"case_id":"rag-agent-002","query":"MCP Client、Host 和 Server 的关系是什么","relevant_sources":["Agent.md"],"tags":["agent","mcp"]}
+{"case_id":"rag-agent-003","query":"Agent 工具调用失败后如何进行超时重试和降级","relevant_sources":["Agent.md"],"tags":["agent","tool-runtime"]}
+{"case_id":"rag-llm-001","query":"大模型幻觉产生的原因以及常见缓解方法","relevant_sources":["LLM.md"],"tags":["llm","hallucination"]}
+{"case_id":"rag-llm-002","query":"Transformer 自注意力机制如何计算","relevant_sources":["LLM.md"],"tags":["llm","transformer"]}
+{"case_id":"rag-llm-003","query":"Prompt Engineering 常用方法有哪些","relevant_sources":["LLM.md"],"tags":["llm","prompt"]}

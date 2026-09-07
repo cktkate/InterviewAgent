@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.spec.bak
+*.egg-info/
+*.egg
+.eggs/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 环境与敏感文件
+.env
+.env.local
+
+# 数据与缓存
+data/
+logs/
+*.log
+*.db
+*.sqlite3
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 测试与覆盖
+.coverage
+htmlcov/
+.pytest_cache/
+
+# 节点（前端工具）
+node_modules/
+
+# 本地模型与压缩包
+bge-m3/
+bge-m3-pytorch.tar
+
+# 本地工具二进制
+tools/cloudflared.exe
+
+# 文档临时文件与生成缓存
+~$*.docx
+.docx_qa/
+
+# 项目截图与本地图片
+images/
+page.png

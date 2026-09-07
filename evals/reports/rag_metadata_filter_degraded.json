@@ -1,0 +1,2125 @@
+{
+  "evaluation": "rag_retrieval",
+  "mode": "hybrid",
+  "top_k": 5,
+  "metrics": {
+    "case_count": 30,
+    "retrieval_success_rate": 1.0,
+    "empty_result_rate": 0.0,
+    "precision_at_k": 0.2,
+    "recall_at_k": 1.0,
+    "hit_rate": 1.0,
+    "mrr": 0.823333,
+    "ndcg_at_k": 0.86805,
+    "p50_latency_ms": 1.18235,
+    "p95_latency_ms": 2.331325,
+    "vector_success_rate": 0.0,
+    "bm25_success_rate": 1.0,
+    "metadata_filter_applied_rate": 1.0,
+    "rerank_applied_rate": 0.0
+  },
+  "metrics_by_tag": {
+    "agent": {
+      "case_count": 18,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.825926,
+      "ndcg_at_k": 0.869373
+    },
+    "alignment": {
+      "case_count": 3,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.666667,
+      "ndcg_at_k": 0.753953
+    },
+    "architecture": {
+      "case_count": 2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.75,
+      "ndcg_at_k": 0.815465
+    },
+    "data": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "easy": {
+      "case_count": 6,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "finetuning": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "hard": {
+      "case_count": 11,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.669697,
+      "ndcg_at_k": 0.752695
+    },
+    "inference": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "langgraph": {
+      "case_count": 3,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.777778,
+      "ndcg_at_k": 0.833333
+    },
+    "llm": {
+      "case_count": 12,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.819444,
+      "ndcg_at_k": 0.866066
+    },
+    "mcp": {
+      "case_count": 3,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "medium": {
+      "case_count": 13,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.871795,
+      "ndcg_at_k": 0.904758
+    },
+    "memory": {
+      "case_count": 2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "monitoring": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.63093
+    },
+    "planning": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.333333,
+      "ndcg_at_k": 0.5
+    },
+    "rag": {
+      "case_count": 4,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.675,
+      "ndcg_at_k": 0.754446
+    },
+    "reliability": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "routing": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "security": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "skill": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "training": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    "transformer": {
+      "case_count": 4,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.833333,
+      "ndcg_at_k": 0.875
+    },
+    "websocket": {
+      "case_count": 1,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "rag-agent-architecture-001",
+      "query": "一个可扩展的智能面试系统为什么要拆成交互、编排和基础能力几层？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "architecture",
+        "easy"
+      ],
+      "retrieved_ids": [
+        "a20bc929-fe9f-4c1c-8ee7-264c7fa1569d",
+        "b2b029a5-cb9f-4db7-a6e5-106dab2aaff5",
+        "7f0fc92b-fdce-470a-9a9d-c5bc0ef286e3",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db",
+        "55bb3b3e-b30b-4d1e-bbb8-a382c14232f7"
+      ],
+      "latency_ms": 1.274,
+      "matched_units": [
+        "evidence:agent-three-layer-architecture"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-three-layer-architecture": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.397
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-routing-002",
+      "query": "用户输入含义不明确时，Agent 应怎样完成意图分流？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "routing",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "a20bc929-fe9f-4c1c-8ee7-264c7fa1569d",
+        "8e29cb66-bcf1-4d19-9316-caf3cb93eb1e",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db",
+        "c35bbd49-33f9-45fb-9fc5-e5fc39973f62",
+        "7d168ab0-903a-49b7-9dac-132ebdcb7054"
+      ],
+      "latency_ms": 1.668,
+      "matched_units": [
+        "evidence:agent-intent-router"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-intent-router": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.463
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-langgraph-003",
+      "query": "为什么有状态、带循环的面试流程更适合使用 LangGraph？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "langgraph",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "7d168ab0-903a-49b7-9dac-132ebdcb7054",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "8e29cb66-bcf1-4d19-9316-caf3cb93eb1e",
+        "55bb3b3e-b30b-4d1e-bbb8-a382c14232f7",
+        "6965632b-cce7-4d48-9bf3-3c8b8bb45b0e"
+      ],
+      "latency_ms": 1.164,
+      "matched_units": [
+        "evidence:agent-langgraph-stateful"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-langgraph-stateful": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.328
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-session-004",
+      "query": "多用户并发面试时，如何隔离每个人的图状态和会话数据？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "memory",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "7d168ab0-903a-49b7-9dac-132ebdcb7054",
+        "3edcb4f6-a931-4bac-8205-0d5fd2309efb",
+        "f8d07688-b9e5-453b-b44c-4ee0710d72c4",
+        "8e29cb66-bcf1-4d19-9316-caf3cb93eb1e",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db"
+      ],
+      "latency_ms": 1.024,
+      "matched_units": [
+        "evidence:agent-session-isolation"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-session-isolation": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.318
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-followup-005",
+      "query": "面试官根据回答连续深挖时，怎么避免无限追问？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "langgraph",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "b2b029a5-cb9f-4db7-a6e5-106dab2aaff5",
+        "8e29cb66-bcf1-4d19-9316-caf3cb93eb1e",
+        "6965632b-cce7-4d48-9bf3-3c8b8bb45b0e",
+        "c35bbd49-33f9-45fb-9fc5-e5fc39973f62",
+        "08663771-6613-4e5e-8b5f-34d4641eee6c"
+      ],
+      "latency_ms": 0.9,
+      "matched_units": [
+        "evidence:agent-followup-limit"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-followup-limit": 3
+      },
+      "first_relevant_rank": 3,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.333333,
+      "ndcg_at_k": 0.5,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.309
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-gap-006",
+      "query": "题目规划如何根据岗位要求与候选人简历差距分配难度？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "planning",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "6965632b-cce7-4d48-9bf3-3c8b8bb45b0e",
+        "2d5569f3-87cf-4828-af7a-5543b5186baa",
+        "c35bbd49-33f9-45fb-9fc5-e5fc39973f62",
+        "e2a88c8e-33c1-4e05-ad45-b0ec475c89da",
+        "7d168ab0-903a-49b7-9dac-132ebdcb7054"
+      ],
+      "latency_ms": 1.55,
+      "matched_units": [
+        "evidence:agent-gap-analysis"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-gap-analysis": 3
+      },
+      "first_relevant_rank": 3,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.333333,
+      "ndcg_at_k": 0.5,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.351
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-hitl-007",
+      "query": "LangGraph 中怎样暂停工作流，等待人工确认后再继续？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "langgraph",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "685286f9-43b2-4462-aa52-cd076f865177",
+        "c35bbd49-33f9-45fb-9fc5-e5fc39973f62",
+        "55bb3b3e-b30b-4d1e-bbb8-a382c14232f7",
+        "2d5569f3-87cf-4828-af7a-5543b5186baa",
+        "f8d07688-b9e5-453b-b44c-4ee0710d72c4"
+      ],
+      "latency_ms": 1.08,
+      "matched_units": [
+        "evidence:agent-human-in-loop"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-human-in-loop": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.351
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-hybrid-008",
+      "query": "语义向量召回和关键词召回的候选结果如何做排序融合？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "rag",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "685286f9-43b2-4462-aa52-cd076f865177",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443",
+        "c2e65338-40d1-43f5-828a-30208a49195c",
+        "e2a88c8e-33c1-4e05-ad45-b0ec475c89da",
+        "2d5569f3-87cf-4828-af7a-5543b5186baa"
+      ],
+      "latency_ms": 1.233,
+      "matched_units": [
+        "evidence:agent-rrf-fusion"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-rrf-fusion": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.447
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-rerank-009",
+      "query": "已经使用 RRF 后为什么还需要模型精排？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "rag",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "685286f9-43b2-4462-aa52-cd076f865177",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443",
+        "e2a88c8e-33c1-4e05-ad45-b0ec475c89da",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "b7df6279-d316-4760-ac7f-1bee68d5883a"
+      ],
+      "latency_ms": 0.926,
+      "matched_units": [
+        "evidence:agent-llm-rerank"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-llm-rerank": 2
+      },
+      "first_relevant_rank": 2,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.63093,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.255
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-rag-metrics-010",
+      "query": "如何从忠实性、相关性和完整性评估检索增强生成？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "rag",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "b2b029a5-cb9f-4db7-a6e5-106dab2aaff5",
+        "aa20dc98-d5f7-40a8-b622-be8628937445",
+        "e2a88c8e-33c1-4e05-ad45-b0ec475c89da",
+        "c2e65338-40d1-43f5-828a-30208a49195c",
+        "2d5569f3-87cf-4828-af7a-5543b5186baa"
+      ],
+      "latency_ms": 1.267,
+      "matched_units": [
+        "evidence:agent-rag-evaluation"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-rag-evaluation": 5
+      },
+      "first_relevant_rank": 5,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.2,
+      "ndcg_at_k": 0.386853,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.462
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-rag-security-011",
+      "query": "私有面试题进入向量库后，检索时怎样避免越权泄漏？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "rag",
+        "security",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "3edcb4f6-a931-4bac-8205-0d5fd2309efb",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443",
+        "685286f9-43b2-4462-aa52-cd076f865177",
+        "a20bc929-fe9f-4c1c-8ee7-264c7fa1569d",
+        "6965632b-cce7-4d48-9bf3-3c8b8bb45b0e"
+      ],
+      "latency_ms": 1.081,
+      "matched_units": [
+        "evidence:agent-rag-security"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-rag-security": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.367
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-redis-memory-012",
+      "query": "短期会话状态在 Redis 中用什么结构保存，如何自动过期？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "memory",
+        "easy"
+      ],
+      "retrieved_ids": [
+        "3edcb4f6-a931-4bac-8205-0d5fd2309efb",
+        "7d168ab0-903a-49b7-9dac-132ebdcb7054",
+        "f8d07688-b9e5-453b-b44c-4ee0710d72c4",
+        "d535a5eb-0054-4fe6-b3aa-a0aab0792232",
+        "8e29cb66-bcf1-4d19-9316-caf3cb93eb1e"
+      ],
+      "latency_ms": 0.974,
+      "matched_units": [
+        "evidence:agent-redis-session"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-redis-session": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.327
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-mcp-protocol-013",
+      "query": "MCP 相比每个平台各写一套函数调用接口，有什么标准化优势？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "mcp",
+        "easy"
+      ],
+      "retrieved_ids": [
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "303eb14b-d29e-4908-b204-2236bf33ab2d",
+        "55bb3b3e-b30b-4d1e-bbb8-a382c14232f7",
+        "b2b029a5-cb9f-4db7-a6e5-106dab2aaff5",
+        "457a47d7-af10-48fd-82c8-067cc10f71d9"
+      ],
+      "latency_ms": 0.971,
+      "matched_units": [
+        "evidence:agent-mcp-protocol"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-mcp-protocol": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.349
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-mcp-client-014",
+      "query": "在系统接入 GitHub 工具时，谁是 MCP Client，调用消息怎样发送？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "mcp",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "303eb14b-d29e-4908-b204-2236bf33ab2d",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "8e29cb66-bcf1-4d19-9316-caf3cb93eb1e",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db",
+        "a20bc929-fe9f-4c1c-8ee7-264c7fa1569d"
+      ],
+      "latency_ms": 0.923,
+      "matched_units": [
+        "evidence:agent-mcp-client-server"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-mcp-client-server": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.295
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-tool-fallback-015",
+      "query": "GitHub API 限流或外部工具超时后，系统应该如何重试与降级？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "mcp",
+        "reliability",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "303eb14b-d29e-4908-b204-2236bf33ab2d",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "e2a88c8e-33c1-4e05-ad45-b0ec475c89da",
+        "aa20dc98-d5f7-40a8-b622-be8628937445",
+        "f8d07688-b9e5-453b-b44c-4ee0710d72c4"
+      ],
+      "latency_ms": 1.104,
+      "matched_units": [
+        "evidence:agent-tool-fallback"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-tool-fallback": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.348
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-skill-016",
+      "query": "Agent Skill 和一次性的 Tool 调用，本质区别是什么？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "skill",
+        "easy"
+      ],
+      "retrieved_ids": [
+        "55bb3b3e-b30b-4d1e-bbb8-a382c14232f7",
+        "303eb14b-d29e-4908-b204-2236bf33ab2d",
+        "aa20dc98-d5f7-40a8-b622-be8628937445",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db"
+      ],
+      "latency_ms": 1.035,
+      "matched_units": [
+        "evidence:agent-skill-vs-tool"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-skill-vs-tool": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.247
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-websocket-017",
+      "query": "怎样把 LangGraph 的中间状态和流式输出实时推送到网页？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "websocket",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "b7df6279-d316-4760-ac7f-1bee68d5883a",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db",
+        "c35bbd49-33f9-45fb-9fc5-e5fc39973f62",
+        "7d168ab0-903a-49b7-9dac-132ebdcb7054",
+        "b2b029a5-cb9f-4db7-a6e5-106dab2aaff5"
+      ],
+      "latency_ms": 1.019,
+      "matched_units": [
+        "evidence:agent-websocket-stream"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-websocket-stream": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.352
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-agent-scale-018",
+      "query": "从本地单用户扩展到百人并发，需要增加哪些网关与异步任务组件？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "agent",
+        "architecture",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "f8d07688-b9e5-453b-b44c-4ee0710d72c4",
+        "aa20dc98-d5f7-40a8-b622-be8628937445",
+        "b7df6279-d316-4760-ac7f-1bee68d5883a",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db"
+      ],
+      "latency_ms": 1.034,
+      "matched_units": [
+        "evidence:agent-concurrency-scale"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:agent-concurrency-scale": 2
+      },
+      "first_relevant_rank": 2,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.63093,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.397
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-position-019",
+      "query": "固定三角函数位置编码相较可学习位置向量，外推时有什么优势？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "transformer",
+        "easy"
+      ],
+      "retrieved_ids": [
+        "fc0755a4-a415-46fb-8d8a-be2839081fba",
+        "4e12c062-14a1-4b0f-ad51-b1791421b710",
+        "25f0d9e6-f51c-4ef5-91d3-a3c10319207f",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443"
+      ],
+      "latency_ms": 1.037,
+      "matched_units": [
+        "evidence:llm-sinusoidal-position"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-sinusoidal-position": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.282
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-rlhf-020",
+      "query": "人类反馈强化学习通常包含哪些阶段，奖励模型承担什么职责？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "alignment",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "fc0755a4-a415-46fb-8d8a-be2839081fba",
+        "9b9e330f-1e64-42b2-94e5-c96f95a38dd9",
+        "bca4dfdd-74c8-428b-9659-083ab3c91542",
+        "c2e65338-40d1-43f5-828a-30208a49195c",
+        "b2b029a5-cb9f-4db7-a6e5-106dab2aaff5"
+      ],
+      "latency_ms": 2.765,
+      "matched_units": [
+        "evidence:llm-rlhf-pipeline"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-rlhf-pipeline": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.817
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-ppo-021",
+      "query": "PPO 为什么限制新旧策略概率比，常见截断区间是多少？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "alignment",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "fc0755a4-a415-46fb-8d8a-be2839081fba",
+        "08cfdd29-0877-4ab7-b4da-09aa74e5bfb7",
+        "aa20dc98-d5f7-40a8-b622-be8628937445",
+        "55b408d2-d8fc-4107-aba1-77392d7f723f",
+        "a20bc929-fe9f-4c1c-8ee7-264c7fa1569d"
+      ],
+      "latency_ms": 1.452,
+      "matched_units": [
+        "evidence:llm-ppo-clip"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-ppo-clip": 2
+      },
+      "first_relevant_rank": 2,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.63093,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.581
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-cleaning-022",
+      "query": "训练大模型前，数据清洗一般要处理哪些低质量和格式问题？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "data",
+        "easy"
+      ],
+      "retrieved_ids": [
+        "08cfdd29-0877-4ab7-b4da-09aa74e5bfb7",
+        "08663771-6613-4e5e-8b5f-34d4641eee6c",
+        "bca4dfdd-74c8-428b-9659-083ab3c91542",
+        "7f0fc92b-fdce-470a-9a9d-c5bc0ef286e3",
+        "e28fa874-f510-4b5c-bf5f-0a9edaa46090"
+      ],
+      "latency_ms": 1.797,
+      "matched_units": [
+        "evidence:llm-data-cleaning"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-data-cleaning": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.836
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-attention-023",
+      "query": "Attention is All You Need 最重要的贡献是什么？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "transformer",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "08cfdd29-0877-4ab7-b4da-09aa74e5bfb7",
+        "4e12c062-14a1-4b0f-ad51-b1791421b710",
+        "55b408d2-d8fc-4107-aba1-77392d7f723f",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db",
+        "3edcb4f6-a931-4bac-8205-0d5fd2309efb"
+      ],
+      "latency_ms": 1.321,
+      "matched_units": [
+        "evidence:llm-attention-contribution"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-attention-contribution": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.255
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-prenorm-024",
+      "query": "Pre-Norm 为什么通常比 Post-Norm 更容易稳定训练深层网络？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "transformer",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "e28fa874-f510-4b5c-bf5f-0a9edaa46090",
+        "25f0d9e6-f51c-4ef5-91d3-a3c10319207f",
+        "7f0fc92b-fdce-470a-9a9d-c5bc0ef286e3",
+        "fc0755a4-a415-46fb-8d8a-be2839081fba",
+        "bca4dfdd-74c8-428b-9659-083ab3c91542"
+      ],
+      "latency_ms": 1.201,
+      "matched_units": [
+        "evidence:llm-pre-post-norm"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-pre-post-norm": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.349
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-rope-025",
+      "query": "旋转位置编码如何表达相对位置信息，并支持更长上下文？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "transformer",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "25f0d9e6-f51c-4ef5-91d3-a3c10319207f",
+        "fc0755a4-a415-46fb-8d8a-be2839081fba",
+        "4e12c062-14a1-4b0f-ad51-b1791421b710",
+        "7f0fc92b-fdce-470a-9a9d-c5bc0ef286e3",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443"
+      ],
+      "latency_ms": 1.766,
+      "matched_units": [
+        "evidence:llm-rope"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-rope": 3
+      },
+      "first_relevant_rank": 3,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.333333,
+      "ndcg_at_k": 0.5,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.64
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-loss-spike-026",
+      "query": "训练中损失突然飙升可能由什么引起，应该怎样处置？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "training",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "bca4dfdd-74c8-428b-9659-083ab3c91542",
+        "4e12c062-14a1-4b0f-ad51-b1791421b710",
+        "82dabfe0-b063-42dd-972c-c3edcd4b47cd",
+        "ef7e2d19-7609-4499-8ee1-c2f37cfe4050",
+        "fc0755a4-a415-46fb-8d8a-be2839081fba"
+      ],
+      "latency_ms": 4.133,
+      "matched_units": [
+        "evidence:llm-loss-spike"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-loss-spike": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 1.042
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-forgetting-027",
+      "query": "指令微调后通用能力下降属于什么现象，如何缓解？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "finetuning",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "82dabfe0-b063-42dd-972c-c3edcd4b47cd",
+        "bca4dfdd-74c8-428b-9659-083ab3c91542",
+        "9fa416a6-b33d-476a-9287-fe2e004b8443",
+        "c35bbd49-33f9-45fb-9fc5-e5fc39973f62",
+        "631f7bf1-1c08-46cd-8349-89257cd5a1db"
+      ],
+      "latency_ms": 1.442,
+      "matched_units": [
+        "evidence:llm-catastrophic-forgetting"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-catastrophic-forgetting": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.427
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-quantization-028",
+      "query": "INT8 量化精度下降为什么常与异常值和权重分布有关？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "inference",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "457a47d7-af10-48fd-82c8-067cc10f71d9",
+        "ef7e2d19-7609-4499-8ee1-c2f37cfe4050",
+        "82dabfe0-b063-42dd-972c-c3edcd4b47cd",
+        "4e12c062-14a1-4b0f-ad51-b1791421b710",
+        "bca4dfdd-74c8-428b-9659-083ab3c91542"
+      ],
+      "latency_ms": 1.125,
+      "matched_units": [
+        "evidence:llm-quantization-error"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-quantization-error": 1
+      },
+      "first_relevant_rank": 1,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.321
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-preference-029",
+      "query": "两个候选回答质量很接近时，偏好标注应使用哪些明确维度？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "alignment",
+        "hard"
+      ],
+      "retrieved_ids": [
+        "457a47d7-af10-48fd-82c8-067cc10f71d9",
+        "08663771-6613-4e5e-8b5f-34d4641eee6c",
+        "685286f9-43b2-4462-aa52-cd076f865177",
+        "fc0755a4-a415-46fb-8d8a-be2839081fba",
+        "55b408d2-d8fc-4107-aba1-77392d7f723f"
+      ],
+      "latency_ms": 1.604,
+      "matched_units": [
+        "evidence:llm-preference-labeling"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-preference-labeling": 2
+      },
+      "first_relevant_rank": 2,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.63093,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.788
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "case_id": "rag-llm-drift-030",
+      "query": "离线指标很好但线上投诉很多，首先应该检查哪类数据变化？",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "tags": [
+        "llm",
+        "monitoring",
+        "medium"
+      ],
+      "retrieved_ids": [
+        "55b408d2-d8fc-4107-aba1-77392d7f723f",
+        "ef7e2d19-7609-4499-8ee1-c2f37cfe4050",
+        "e28fa874-f510-4b5c-bf5f-0a9edaa46090",
+        "f8d07688-b9e5-453b-b44c-4ee0710d72c4",
+        "08cfdd29-0877-4ab7-b4da-09aa74e5bfb7"
+      ],
+      "latency_ms": 1.801,
+      "matched_units": [
+        "evidence:llm-distribution-shift"
+      ],
+      "missed_units": [],
+      "matched_ranks": {
+        "evidence:llm-distribution-shift": 2
+      },
+      "first_relevant_rank": 2,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.63093,
+      "retrieval_diagnostics": {
+        "vector_init": {
+          "status": "failed",
+          "error_type": "UnexpectedStatusCodeError"
+        },
+        "bm25": {
+          "status": "success",
+          "count": 10,
+          "latency_ms": 0.419
+        },
+        "fusion": {
+          "status": "success",
+          "count": 10
+        },
+        "metadata_filter": {
+          "status": "applied",
+          "level": "strict",
+          "input_count": 10,
+          "security_count": 10,
+          "strict_count": 10,
+          "topic_count": 10,
+          "result_count": 5
+        },
+        "query_rewrite": {
+          "status": "disabled",
+          "added_terms": []
+        },
+        "rerank": {
+          "status": "skipped"
+        }
+      }
+    }
+  ],
+  "dataset": "evals\\datasets\\rag_retrieval.expanded.jsonl",
+  "metadata_filter_mode": "tag_domains",
+  "generated_at": "2026-08-31T07:15:19.475392+00:00",
+  "gate": {
+    "passed": false,
+    "violations": [
+      {
+        "metric": "mrr",
+        "rule": "max_drop",
+        "expected": 0.8311109999999999,
+        "actual": 0.823333,
+        "baseline": 0.861111
+      }
+    ]
+  },
+  "baseline_path": "evals\\reports\\rag_expanded_final.json",
+  "threshold_path": "evals/thresholds.example.json"
+}

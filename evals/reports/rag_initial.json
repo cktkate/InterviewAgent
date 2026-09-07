@@ -1,0 +1,146 @@
+{
+  "evaluation": "rag_retrieval",
+  "mode": "hybrid",
+  "top_k": 5,
+  "metrics": {
+    "case_count": 6,
+    "retrieval_success_rate": 1.0,
+    "empty_result_rate": 0.0,
+    "precision_at_k": 0.166667,
+    "recall_at_k": 0.833333,
+    "hit_rate": 0.833333,
+    "mrr": 0.833333,
+    "ndcg_at_k": 0.833333,
+    "p50_latency_ms": 543.00625,
+    "p95_latency_ms": 1581.104775
+  },
+  "cases": [
+    {
+      "case_id": "rag-agent-001",
+      "query": "AI Agent 中规划、工具调用和记忆分别解决什么问题",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "retrieved_ids": [
+        "9fad700c-ce2a-49e1-a526-7c79728f11fb",
+        "19fba33d-0355-45c3-88c8-09d65aac5864",
+        "9149b921-d379-4b17-be84-586ac15bec44",
+        "acb32951-79e1-4409-865f-aa4397ad3ff0",
+        "259a6ca0-b7be-43a5-9cc6-d800d816fc6e"
+      ],
+      "latency_ms": 1925.117,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "case_id": "rag-agent-002",
+      "query": "MCP Client、Host 和 Server 的关系是什么",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "retrieved_ids": [
+        "ed759136-2f91-4f39-9732-708a69f8a3eb",
+        "19fba33d-0355-45c3-88c8-09d65aac5864",
+        "487110e5-74f7-4bbf-b315-eaa0f26ddfad",
+        "8e8e5dba-e4c6-4f48-b641-0f34469b6895",
+        "48ec4401-b486-43f1-8ac5-7f01b0988aca"
+      ],
+      "latency_ms": 506.972,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "case_id": "rag-agent-003",
+      "query": "Agent 工具调用失败后如何进行超时重试和降级",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "retrieved_ids": [
+        "ae377ad6-0681-4703-b59e-f4c50368a3ce",
+        "9fad700c-ce2a-49e1-a526-7c79728f11fb",
+        "ed759136-2f91-4f39-9732-708a69f8a3eb",
+        "acb32951-79e1-4409-865f-aa4397ad3ff0",
+        "259a6ca0-b7be-43a5-9cc6-d800d816fc6e"
+      ],
+      "latency_ms": 537.656,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "case_id": "rag-llm-001",
+      "query": "大模型幻觉产生的原因以及常见缓解方法",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "retrieved_ids": [
+        "c23230c1-1766-4cd1-8ebe-43c3136dbc70",
+        "9149b921-d379-4b17-be84-586ac15bec44",
+        "f01a38e9-0124-4793-bedc-b712d91c06c5",
+        "ec1e5763-c01a-4a0a-abcf-c6abff7ff19b",
+        "90c4bbea-e3f6-4035-9d44-48683f1b48a0"
+      ],
+      "latency_ms": 521.898,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "case_id": "rag-llm-002",
+      "query": "Transformer 自注意力机制如何计算",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "retrieved_ids": [
+        "586a793d-7c9c-4a9b-9f8f-9f7419784d39",
+        "f01a38e9-0124-4793-bedc-b712d91c06c5",
+        "ec1e5763-c01a-4a0a-abcf-c6abff7ff19b",
+        "260e1a30-3555-412e-874e-61877c65c98f",
+        "9149b921-d379-4b17-be84-586ac15bec44"
+      ],
+      "latency_ms": 549.07,
+      "precision_at_k": 0.2,
+      "recall_at_k": 1.0,
+      "hit_rate": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "case_id": "rag-llm-003",
+      "query": "Prompt Engineering 常用方法有哪些",
+      "status": "success",
+      "error": "",
+      "top_k": 5,
+      "retrieved_ids": [
+        "821d35f9-4413-484b-906f-aefd200a2f9b",
+        "ae377ad6-0681-4703-b59e-f4c50368a3ce",
+        "2ace35c2-7adc-418f-b2ac-7c296498f6a1",
+        "b0b4720c-1815-4882-a8ec-399e7ac3b266",
+        "259a6ca0-b7be-43a5-9cc6-d800d816fc6e"
+      ],
+      "latency_ms": 548.356,
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "hit_rate": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_k": 0.0
+    }
+  ],
+  "dataset": "evals\\datasets\\rag_retrieval.example.jsonl",
+  "generated_at": "2026-08-21T12:01:22.630444+00:00",
+  "gate": {
+    "passed": true,
+    "violations": []
+  },
+  "threshold_path": "evals\\thresholds.example.json"
+}

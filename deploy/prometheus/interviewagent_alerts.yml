@@ -1,0 +1,103 @@
+groups:
+  - name: interviewagent-slo
+    rules:
+      - alert: InterviewAgentDependencyNotReady
+        expr: interviewagent_dependency_ready == 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "InterviewAgent dependency is not ready"
+
+      - alert: InterviewAgentDependencyUnavailable
+        expr: interviewagent_dependency_ready == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "InterviewAgent dependency has been unavailable for 5 minutes"
+
+      - alert: InterviewAgentReportSuccessRateLow
+        expr: |
+          (
+            sum(rate(interviewagent_report_tasks_total{outcome="success"}[10m]))
+            /
+            clamp_min(sum(rate(interviewagent_report_tasks_total[10m])), 0.001)
+          ) < 0.95
+          and on()
+          sum(increase(interviewagent_report_tasks_total[10m])) >= 5
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Report task success rate is below 95%"
+
+      - alert: InterviewAgentReportP95High
+        expr: |
+          histogram_quantile(0.95,
+            sum by (le) (
+              rate(interviewagent_report_task_duration_seconds_bucket{execution="celery"}[15m])
+            )
+          ) > 150
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Report task P95 latency is above 150 seconds"
+
+      - alert: InterviewAgentReportRetryRateHigh
+        expr: |
+          (
+            sum(rate(interviewagent_report_task_retries_total[15m]))
+            /
+            clamp_min(sum(rate(interviewagent_report_tasks_total[15m])), 0.001)
+          ) > 0.10
+          and on()
+          sum(increase(interviewagent_report_tasks_total[15m])) >= 5
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Report retries per terminal task are above 10%"
+
+      - alert: InterviewAgentToolSuccessRateLow
+        expr: |
+          (
+            sum(rate(interviewagent_tool_calls_total{outcome="success"}[10m]))
+            /
+            clamp_min(sum(rate(interviewagent_tool_calls_total[10m])), 0.001)
+          ) < 0.95
+          and on()
+          sum(increase(interviewagent_tool_calls_total[10m])) >= 20
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Tool Runtime success rate is below 95%"
+
+      - alert: InterviewAgentRunSuccessRateLow
+        expr: |
+          (
+            sum(rate(interviewagent_agent_runs_total{outcome="success"}[10m]))
+            /
+            clamp_min(sum(rate(interviewagent_agent_runs_total[10m])), 0.001)
+          ) < 0.95
+          and on()
+          sum(increase(interviewagent_agent_runs_total[10m])) >= 10
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Agent run success rate is below 95%"
+
+      - alert: InterviewAgentAverageTokensHigh
+        expr: |
+          sum(increase(interviewagent_llm_tokens_total[15m]))
+          /
+          clamp_min(sum(increase(interviewagent_agent_runs_total{outcome="success"}[15m])), 1)
+          > 24000
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Average token use is above 80% of the per-run budget"

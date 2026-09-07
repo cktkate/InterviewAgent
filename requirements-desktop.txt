@@ -1,0 +1,3 @@
+# Install after requirements.txt when building/running the Windows desktop app.
+pywebview>=5.0,<7
+pyinstaller>=6.0,<7
